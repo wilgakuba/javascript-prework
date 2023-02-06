@@ -21,36 +21,12 @@ function playGame(){
       return 'nożyce';
     }
   }
-  /*
-  if(randomNumber == 1){
-    computerMove = 'kamień';
-  }
-
-  if(randomNumber == 2){
-      computerMove = 'papier';
-  }
-
-  if(randomNumber == 3){
-      computerMove = 'nożyce'
-  } */
 
   printMessage('Mój ruch to: ' + computerMove);
 
   console.log('Gracz wpisał: ' + playerInput);
 
   let playerMove = getMoveName(randomNumber);
-  /*
-  if(playerInput == '1'){
-    playerMove = 'kamień';
-  }
-
-  if(playerInput == '2'){
-      playerMove = 'papier';
-  }
-
-  if(playerInput == '3'){
-      playerMove = 'nożyce';
-  } */
 
   printMessage('Twój ruch to: ' + playerMove);
 
