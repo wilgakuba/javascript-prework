@@ -73,14 +73,14 @@ function playGame(){
     if(playerMove == 'nieznany ruch') {
       printMessage('Błąd!')
     }
-    }
+  }
 }
 document.getElementById('play-rock').addEventListener('click', function(){
-  playGame('Wybrałeś kamień');
+  playGame(1);
 });
 document.getElementById('play-paper').addEventListener('click', function(){
-  playGame('Wybrałeś papier');
+  playGame(2);
 });
 document.getElementById('play-scissors').addEventListener('click', function(){
-  playGame('wybrałeś nożyce');
+  playGame(3);
 });
