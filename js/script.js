@@ -1,8 +1,19 @@
-function playGame(){
+function playGame(playerInput){
   
   function clearMessages()
 
-  let playerInput = getMoveName(randomNumber);
+  let getMoveName = function(argMove) {
+    if (argMove == 1) {
+        return 'kamień';
+    } else if (argMove == 2) {
+        return 'papier';
+    } else if (argMove == 3) {
+        return 'nożyce';
+    } else {
+        printMessage('Nie znam ruchu o id ' + argMove + '.');
+        return 'nieznany ruch';
+    }
+}
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -26,7 +37,7 @@ function playGame(){
 
   console.log('Gracz wpisał: ' + playerInput);
 
-  let playerMove = getMoveName(randomNumber);
+  let playerMove = getMoveName(playerInput);
 
   printMessage('Twój ruch to: ' + playerMove);
 
