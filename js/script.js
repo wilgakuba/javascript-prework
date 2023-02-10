@@ -1,26 +1,21 @@
 {
-  function playGame(){
-    
-    function clearMessages()
-
-    const playerInput = getMoveName(randomNumber);
-
-function playGame(playerInput){
+  const playGame = function(playerInput){
   
-  function clearMessages()
+  clearMessages();
 
-  let getMoveName = function(argMove) {
-    if (argMove == 1) {
-        return 'kamień';
-    } else if (argMove == 2) {
-        return 'papier';
-    } else if (argMove == 3) {
-        return 'nożyce';
-    } else {
-        printMessage('Nie znam ruchu o id ' + argMove + '.');
-        return 'nieznany ruch';
+  const getMoveName = function(argMove) {
+        if (argMove == 1) {
+            return 'kamień';
+        } else if (argMove == 2) {
+            return 'papier';
+        } else if (argMove == 3) {
+            return 'nożyce';
+        } else {
+            printMessage('Nie znam ruchu o id ' + argMove + '.');
+            return 'nieznany ruch';
+        }
+      }
     }
-  }
     const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
@@ -47,7 +42,7 @@ function playGame(playerInput){
 
     printMessage('Twój ruch to: ' + playerMove);
 
-    function displayResult(computerMove, playerMove){
+    const displayResult = function(computerMove, playerMove){
     
       printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove); 
 
@@ -90,8 +85,8 @@ function playGame(playerInput){
       if(playerMove == 'nieznany ruch') {
         printMessage('Błąd!')
       }
-    }
-  }
+    };
+  
   document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
   });
@@ -101,5 +96,5 @@ function playGame(playerInput){
   document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);
   });
-  }
+
 }
