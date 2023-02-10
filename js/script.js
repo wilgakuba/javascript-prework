@@ -15,7 +15,7 @@
             return 'nieznany ruch';
         }
       }
-    }
+    
     const randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
@@ -86,7 +86,7 @@
         printMessage('Błąd!')
       }
     };
-  
+  }
   document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
   });
